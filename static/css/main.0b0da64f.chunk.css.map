@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Profile/Profile.css"],"names":[],"mappings":"AAAA,SACI,aAAc,CACd,cAAe,CACf,WAAY,CAEZ,oBACJ","file":"main.0b0da64f.chunk.css","sourcesContent":[".profile {\n    display: block;\n    max-width: 100%;\n    height: auto;\n\n    background-color: red;\n}\n"]}
