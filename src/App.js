@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import Profile from "./components/Profile/Profile";
 import user from "./data/user.json";
 import Statistics from "./components/Statistics/Statistics";
@@ -13,7 +13,7 @@ import transactions from './data/transactions.json'
 const App = () => {
     return (
         <div>
-            <Profile123
+            <Profile
                 name={user.name}
                 tag={user.tag}
                 location={user.location}
