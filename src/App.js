@@ -13,7 +13,7 @@ import transactions from './data/transactions.json'
 const App = () => {
     return (
         <div>
-            <Profile
+            <Profile123
                 name={user.name}
                 tag={user.tag}
                 location={user.location}
