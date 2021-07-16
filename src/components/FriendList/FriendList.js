@@ -1,17 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FriendItem from "./FriendItem";
+import styles from './FriendList.module.css'
 
 const FriendsList = ({ friends }) => (
-    <ul class="stat-list">
-        {friends.map((friend) => (
+    <ul className={styles.stat_list}>
+        {friends.map((friend) => {
+            let isOnline = 'onLine'
+            if (!friend.isOnline) {
+               isOnline = 'offLine'
+            }
+
+            return (
             <FriendItem
                 id={friend.id}
                 avatar={friend.avatar}
                 name={friend.name}
-                isOnline={friend.isOnline}
+                isOnline={isOnline}
             />
-        ))}
+        )})}
     </ul>
 );
 
@@ -25,8 +32,8 @@ FriendsList.propTypes = {
     friends: PropTypes.shape({
         id: PropTypes.number.isRequired,
         avatar: PropTypes.string,
-        name: PropTypes.string,
-        isOnline: PropTypes.string,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.string.isRequired,
     }),
 };
 
