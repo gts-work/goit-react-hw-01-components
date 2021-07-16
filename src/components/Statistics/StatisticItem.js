@@ -1,10 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from './Statistics.module.css'
+import generatorColor from '../../color_generate'
+
+
+console.log("colorRange: ", generatorColor())
+
+
 
 const StatisticItem = ({ id, label, percentage }) => (
-    <li class="item" key={id}>
-        <span class="label">{label}</span>
-        <span class="percentage">{percentage}%</span>
+    <li className={styles.item} style={{ backgroundColor: generatorColor() }} key={id}>
+        <span className={styles.label}>{label}</span>
+        <span className={styles.percentage}>{percentage}%</span>
     </li>
 );
 
