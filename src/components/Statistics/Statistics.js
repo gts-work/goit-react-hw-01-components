@@ -9,9 +9,7 @@ const Statistics = ({ title, stats }) => (
         <ul class="stat-list">
             {stats.map((stat) => (
                 <StatisticItem
-                    id={stat.id}
-                    label={stat.label}
-                    percentage={stat.percentage}
+                    stat={stat}
                 />
             ))}
         </ul>
@@ -23,9 +21,9 @@ Statistics.defaultProps = {
 };
 
 Statistics.propTypes = {
-    id: PropTypes.number.isRequired,
     title: PropTypes.string,
     stats: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         label: PropTypes.string.isRequired,
         percentage: PropTypes.number.isRequired,
     }),
